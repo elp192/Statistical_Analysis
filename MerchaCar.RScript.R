@@ -23,11 +23,11 @@ lot_summary<- table2 %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI
 t.test(table2$PSI,mu=1500)
 
 # Determine if the PSI for each manufacturing lot is statistically different from the population mean of 1,500 pounds per square inch.
-t.test(subset(table2,Manufacturing_Lot=Lot1)$PSI,mu=1500)
+t.test(subset(table2,Manufacturing_Lot=="Lot1")$PSI,mu=1500)
 
-t.test(subset(table2,Manufacturing_Lot=Lot2)$PSI,mu=1500)
+t.test(subset(table2,Manufacturing_Lot=="Lot2")$PSI,mu=1500)
 
-t.test(subset(table2,Manufacturing_Lot=Lot3)$PSI,mu=1500)
+t.test(subset(table2,Manufacturing_Lot=="Lot3")$PSI,mu=1500)
 
 
 
