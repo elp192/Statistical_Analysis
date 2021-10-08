@@ -2,7 +2,7 @@
 ## Project Overview
 In this project, statistical testings are performed to analyze the data from MechaCar company as the manufacturing team faces the production problem in the company. This analysis provides the team to understand the issues better.
 The following resources and software are utilized in the project:
-- Data:[MechaCar_mpg.csv](https://github.com/elp192/Statistical_Analysis/blob/0feb2c85ec99d25d1315060dc7d47520b740f9a8/data/MechaCar_mpg.csv), [Suspension_Coil.csv](https://github.com/elp192/Statistical_Analysis/blob/0feb2c85ec99d25d1315060dc7d47520b740f9a8/data/Suspension_Coil.csv)
+- Data: [MechaCar_mpg.csv](https://github.com/elp192/Statistical_Analysis/blob/0feb2c85ec99d25d1315060dc7d47520b740f9a8/data/MechaCar_mpg.csv), [Suspension_Coil.csv](https://github.com/elp192/Statistical_Analysis/blob/0feb2c85ec99d25d1315060dc7d47520b740f9a8/data/Suspension_Coil.csv)
 - Software: RStudio
 
 ## Results
@@ -33,9 +33,15 @@ The suspension coil dataset includes various production lots. The company's desi
   <img width="554" alt="lot_summary" src="https://user-images.githubusercontent.com/85843401/136432020-1a5e99b8-23e1-4376-abf0-9ef284ce27bc.png"> <figcaption>Figure 3: Summary statistics related to suspension coils for each lot.</figcaption></figure/> 
 <p align="center">
   
+### T-Tests on Suspension Coils
+Various t-tests are applied on the suspension coils dataset to investigate whether all manufacturing lots and each lot differ from a population mean of 1500 PSI. Figure 4 represents that the p-value is 0.06 and is more than a significant level (i.e., >0.05). So, there is not enough evidence to reject the null hypothesis (i.e., there is no statistical difference between the mean of suspension coil data and population mean of 1500 PSI). Also, Figure 5 represents that the p-value for manufacturing lots 1 and 2 is 1 and 0.6, respectively, which are more than significant level (i.e., >0.05), and we fail to reject the null hypothesis; however, the p-value for lot 3 is 0.04 and less than 0.05 (<0.05). So, we have sufficient evidence to reject the null hypothesis. We can conclude that the means of all manufacturing lots and lots 1 and 2 are not statistically different from the population mean of 1500 PSI. In contrast, the mean of lot 3 is statistically different from the population mean of 1500 PSI.
   
+<p img align="center" width="100%">  
+  <img width="350" alt="t_test_totalLot" src="https://user-images.githubusercontent.com/85843401/136450833-752d0fb7-8db2-4aa3-afa7-dbe829d8702d.png"><figcaption>Figure 4: T-test related to all manufacturing lots.</figcaption></figure/> 
   
- 
-
-
- 
+<p img align="center" width="100%">  
+  <img width="350" alt="t_test_lot1" src="https://user-images.githubusercontent.com/85843401/136450857-05f13649-756a-41ad-9d3a-adc5adfec3e3.png">
+  <img width="355" alt="t_test_lot2" src="https://user-images.githubusercontent.com/85843401/136450880-6282570f-52ed-485a-af82-66ef5926570c.png">
+  <img width="350" alt="t_test_lot3" src="https://user-images.githubusercontent.com/85843401/136450899-21005f69-67bb-4840-879e-6cbfd71e9a3c.png">
+<figcaption>Figure 5: T-test related to each lot. Left-upper: lot1, Rigth-upper: lot2, Left-below: lot3.</figcaption></figure/> 
+<p align="center">
